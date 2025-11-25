@@ -1,0 +1,358 @@
+{
+	"info": {
+		"_postman_id": "2d7cb491-325d-4d4e-9160-adfa74024ab2",
+		"name": "VaideCarona_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38073561"
+	},
+	"item": [
+		{
+			"name": "Automoveis",
+			"item": [
+				{
+					"name": "pega_automoveis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/automoveis",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"automoveis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cria_automoveis",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"placa\": \"BCD9E34\",\r\n    \"modelo\": \"Kicks\",\r\n    \"tipo\": \"SUV\",\r\n    \"marca\": \"Nissan\",\r\n    \"ano_fabricacao\": 2023,\r\n    \"cor\": \"Laranja\",\r\n    \"capacidade_passageiros\": 5,\r\n    \"foto_veiculo\": \"kicks_laranja.jpg\",\r\n    \"status_veiculo\": \"DISPONIVEL\",\r\n    \"motorista_id\": 11\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/automoveis",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"automoveis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pega_automoveis_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/automoveis/7",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"automoveis",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "altera_automoveis",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"placa\": \"ZAB6C78\",\r\n    \"modelo\": \"T-Cross\",\r\n    \"tipo\": \"SUV\",\r\n    \"marca\": \"Volkswagen\",\r\n    \"ano_fabricacao\": 2024,\r\n    \"cor\": \"Azul\",\r\n    \"capacidade_passageiros\": 5,\r\n    \"foto_veiculo\": \"tcross_azul.jpg\",\r\n    \"status_veiculo\": \"DISPONIVEL\",\r\n    \"motorista_id\": 27\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/automoveis/7",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"automoveis",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleta_automoveis",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/automoveis/7",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"automoveis",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Notificacoes",
+			"item": [
+				{
+					"name": "pega_notificacoes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/notificacoes",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"notificacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cria_notificacoes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Pagamento Pendente3\",\r\n    \"mensagem\": \"Você possui um pagamento pendente no valor de R$ 45,50. Regularize sua situação.3\",\r\n    \"data_envio\": 1761528000,\r\n    \"lida\": 1,\r\n    \"tipo_notificacao\": 3,\r\n    \"viagem_id\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/notificacoes",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"notificacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pega_notificacoes_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/notificacoes/4",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"notificacoes",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "altera_notificacoes",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"titulo\": \"Pagamento Pendente2\",\r\n    \"mensagem\": \"Você possui um pagamento pendente no valor de R$ 45,50. Regularize sua situação2.\",\r\n    \"data_envio\": 1761528000,\r\n    \"lida\": 1,\r\n    \"tipo_notificacao\": 3,\r\n    \"viagem_id\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/notificacoes/1",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"notificacoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleta_notificacoes",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/notificacoes/1",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"notificacoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "pega_usuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/usuarios",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "cria_usuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Ana Carolina Lima\",\r\n    \"email\": \"ana.lima@ipm.com\",\r\n    \"senha\": \"senha456\",\r\n    \"idade\": 25,\r\n    \"sexo\": \"Feminino\",\r\n    \"telefone\": \"(21) 96666-5555\",\r\n    \"data_nascimento\": \"1999-12-03\",\r\n    \"cpf\": \"555.666.777-88\",\r\n    \"endereco\": \"Av. Brasil, 2000 - Rio de Janeiro/RJ\",\r\n    \"nacionalidade\": \"Brasileira\",\r\n    \"ultima_atividade\": \"2025-10-27 13:30:00\",\r\n    \"email_verificado\": 0,\r\n    \"status_conta\": \"PENDENTE\",\r\n    \"foto_identidade\": \"ana_lima.jpg\",\r\n    \"tipo_usuario\": \"PASSAGEIRO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/usuarios",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pega_usuario_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/usuarios/14",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"usuarios",
+								"14"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "altera_usuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Juliana Rodrigues\",\r\n    \"email\": \"juliana.admin@ipm.com\",\r\n    \"senha\": \"admin2025\",\r\n    \"idade\": 38,\r\n    \"sexo\": \"Feminino\",\r\n    \"telefone\": \"(11) 93333-2222\",\r\n    \"data_nascimento\": \"1986-07-25\",\r\n    \"cpf\": \"222.333.444-55\",\r\n    \"endereco\": \"Rua dos Administradores, 100 - São Paulo/SP\",\r\n    \"nacionalidade\": \"Brasileira\",\r\n    \"ultima_atividade\": \"2025-10-27 15:00:00\",\r\n    \"email_verificado\": 1,\r\n    \"status_conta\": \"ATIVO\",\r\n    \"foto_identidade\": \"juliana_admin.jpg\",\r\n    \"tipo_usuario\": \"ADMINISTRADOR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{localhost}}/api/usuarios/10",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"usuarios",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleta_usuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{localhost}}/api/usuarios/140",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"api",
+								"usuarios",
+								"140"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
