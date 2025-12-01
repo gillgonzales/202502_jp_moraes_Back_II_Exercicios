@@ -1,0 +1,23 @@
+{
+    "name": "jpm/intro_composer",
+    "description": "exemplo project composer",
+    "type": "project",
+    "require": {
+        "illuminate/support": "^12.26"
+    },
+    "require-dev": {
+        "psy/psysh": "^0.12.10"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Jpm\\IntroComposer\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Joao Pedro",
+            "email": "joaomoraes.pl039@academico.ifsul.edu.br"
+        }
+    ]
+}
