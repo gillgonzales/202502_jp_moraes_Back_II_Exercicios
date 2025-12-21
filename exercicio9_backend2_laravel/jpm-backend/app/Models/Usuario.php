@@ -62,7 +62,6 @@ class Usuario extends Authenticatable
         return $this->hasOne(Administrador::class, 'usuario_id');
     }
 
-    // N:M  – Notificações recebidas
     public function notificacoes()
     {
         return $this->belongsToMany(
@@ -73,7 +72,6 @@ class Usuario extends Authenticatable
         )->withTimestamps();
     }
 
-    // N:M  – Denúncias em que o usuário é denunciante
     public function denunciasFeitas()
     {
         return $this->belongsToMany(

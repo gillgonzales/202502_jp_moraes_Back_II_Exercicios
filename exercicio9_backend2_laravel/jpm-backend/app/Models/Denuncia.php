@@ -11,8 +11,8 @@ class Denuncia extends Model
 
     /* ============== CONFIGURAÇÃO BÁSICA ============== */
 
-    protected $table      = 'denuncia';   // conforme script SQL
-    public    $timestamps = false;
+    protected $table = 'denuncia';   // conforme script SQL
+    public $timestamps = false;
 
     protected $fillable = [
         'dataEnvio',
@@ -30,9 +30,15 @@ class Denuncia extends Model
     ];
 
     protected $casts = [
-        'dataEnvio'    => 'datetime',
+        'dataEnvio' => 'datetime',
         'dataResposta' => 'datetime',
     ];
+
+    //  public function getStatusAttribute()
+    // {
+    //     return $this->status_denuncia;
+    // }
+
 
     /* ============== RELACIONAMENTOS ============== */
 
@@ -43,10 +49,10 @@ class Denuncia extends Model
     public function denunciantes()
     {
         return $this->belongsToMany(
-            Usuario::class,          
-            'denuncia_denunciantes',  
-            'denuncia_id',            
-            'denunciante_id'         
+            Usuario::class,
+            'denuncia_denunciantes',
+            'denuncia_id',
+            'denunciante_id'
         );
     }
 

@@ -17,9 +17,6 @@ use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
-    /* =====================================================
-       POST /api/register
-    ===================================================== */
     public function register(AuthRegisterRequest $request)
     {
         DB::beginTransaction();
@@ -53,7 +50,7 @@ class AuthController extends Controller
                 case Usuario::TIPO_PASSAGEIRO:
                     Passageiro::create([
                         'usuario_id'              => $usuario->id,
-                        'apelido'                 => $data['apelido'],
+                        //'apelido'                 => $data['apelido'],
                         'fotoPerfil'              => $data['fotoPerfil'] ?? '',
                         'descricao_perfil'        => $data['descricao_perfil'] ?? '',
                         'preferencias_linguagem'  => $data['preferencias_linguagem'] ?? '',

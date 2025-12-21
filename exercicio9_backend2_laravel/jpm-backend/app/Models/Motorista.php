@@ -9,11 +9,11 @@ class Motorista extends Model
 {
     use HasFactory;
 
-    protected $table        = 'motoristas';   // tabela filha
-    protected $primaryKey   = 'usuario_id';   // PK = FK para usuarios.id
-    public    $incrementing = false;          // não auto-incrementa
-    protected $keyType      = 'int';
-    public    $timestamps   = false;          // sem created_at/updated_at
+    protected $table = 'motoristas';   // tabela filha
+    protected $primaryKey = 'usuario_id';   // PK = FK para usuarios.id
+    public $incrementing = false;          // não auto-incrementa
+    protected $keyType = 'int';
+    public $timestamps = false;          // sem created_at/updated_at
 
     protected $fillable = [
         'usuario_id',
@@ -25,8 +25,8 @@ class Motorista extends Model
     ];
 
     protected $casts = [
-        'validade_cnh'  => 'date',
-        'data_aprovacao'=> 'datetime',
+        'validade_cnh' => 'date',
+        'data_aprovacao' => 'datetime',
     ];
 
     // 1:1  Motorista → linha base em 'usuarios'
