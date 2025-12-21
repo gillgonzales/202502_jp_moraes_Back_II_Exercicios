@@ -8,6 +8,7 @@ use App\Models\Denuncia;
 use App\Models\Notificacao;
 use Carbon\Carbon;
 
+//teste
 class DashboardController extends Controller
 {
     public function index()
