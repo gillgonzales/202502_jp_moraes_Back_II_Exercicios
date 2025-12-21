@@ -14,4 +14,5 @@ trait TraitImcEx
             echo "Erro, defina peso e altura primeiro!";
         }
     }
+    //Faltou implementar os métodos calssifica e isNormal
 }

@@ -69,6 +69,7 @@ class Atleta extends Pessoa
     }
 
     public function __toString(): string 
+    //Faltou classificar e informar se é normal para a idade com isNormal da Trait IMC
     {
         $saida = "\n=== Dados do " . self::class . " ==="
                . "\nNome: $this->nome"

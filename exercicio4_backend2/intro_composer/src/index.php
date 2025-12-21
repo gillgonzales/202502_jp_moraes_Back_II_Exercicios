@@ -57,7 +57,7 @@ use Jpm\IntroComposer\classes\Atleta;
  **/
 
 //implementando o uso de Traits no PHP
-
+echo "<pre>";
 $atleta = new Atleta("João Silva", 25, 1.75, 60);
 echo $atleta;
 
