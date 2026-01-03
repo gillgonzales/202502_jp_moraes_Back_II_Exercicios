@@ -100,8 +100,8 @@ class UsuarioApiController extends Controller
 
             $data = $request->validated();
 
-            if (array_key_exists('senha', $data)) {
-                $data['senha'] = bcrypt($data['senha']);
+            if (array_key_exists('senha', $data)) {// Não precisa disso se adicionar na model o cast hashed para o campo senha.
+                $data['senha'] = bcrypt($data['senha']);//Poderia usar o facade Hash::make
             }
 
             $usuario->update($data);
