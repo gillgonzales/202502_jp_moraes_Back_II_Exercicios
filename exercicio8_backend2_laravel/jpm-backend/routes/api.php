@@ -20,13 +20,14 @@ Route::middleware('auth:sanctum')->group(function () {
     // Somente ADMINISTRADOR
     Route::middleware('role:ADMINISTRADOR')->group(function () {
         Route::apiResource('usuarios',     UsuarioApiController::class);
-        
+
     });
 
-    // ADMINISTRADOR ou MOTORISTA
+    // ADMINISTRADOR ou MOTORISTA (Refatorar para Habilidades diretamente nos tokens[ability])
     Route::middleware('role:ADMINISTRADOR,MOTORISTA')->group(function () {
         Route::apiResource('automoveis',   AutomovelApiController::class);
     });
+    //Deveria manter públicas as rotas GET usando except ou only
 
      Route::middleware('role:ADMINISTRADOR,MOTORISTA,PASSAGEIRO')->group(function () {
        Route::apiResource('notificacoes', NotificacaoApiController::class);
