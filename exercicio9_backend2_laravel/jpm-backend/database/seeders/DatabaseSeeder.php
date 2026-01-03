@@ -16,5 +16,7 @@ class DatabaseSeeder extends Seeder
         // User::factory(10)->create();
 
         Usuario::factory(3)->create();
+        //Criar factories e seeders de mais dois models pelo menos
+        //E testar as configurações dos relacionamentos entre eles ao popular o banco.
     }
 }
