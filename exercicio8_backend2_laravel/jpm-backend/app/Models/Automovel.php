@@ -8,7 +8,7 @@ class Automovel extends Model
 {
     protected $table = 'automovel';
     public $timestamps = false;
-    
+
     protected $fillable = [
         'placa',
         'modelo',
