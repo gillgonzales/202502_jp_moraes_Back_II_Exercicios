@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\AuthLoginRequest; 
+use App\Http\Requests\AuthLoginRequest;
 use App\Http\Requests\AuthRegisterRequest;
 use App\Http\Resources\AuthUserResource;      // Resource “leve” para auth
 use App\Models\Usuario;
@@ -13,7 +13,7 @@ use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
-    
+
     //registro para autenticacao do sistema
 
     public function register(AuthRegisterRequest $request)
@@ -39,6 +39,7 @@ class AuthController extends Controller
         $data    = $request->validated();                       // e-mail + senha
         $usuario = Usuario::where('email', $data['email'])->first();
 
+        //Hash::check é legado, exemplo de LLM, em aula usamos o Auth::attempt
         if (! $usuario || ! Hash::check($data['senha'], $usuario->senha)) {
             throw ValidationException::withMessages([
                 'email' => ['As credenciais fornecidas estão incorretas.'],
@@ -60,6 +61,7 @@ class AuthController extends Controller
      * POST /api/logout
      * Revoga apenas o token usado nesta requisição.
      */
+    //Faltou a opção para revogar todos os tokens
     public function logout(Request $request)
     {
         $request->user()->currentAccessToken()->delete();
