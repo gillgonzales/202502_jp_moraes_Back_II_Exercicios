@@ -3,13 +3,13 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;  
-use Illuminate\Notifications\Notifiable;                  
-use Laravel\Sanctum\HasApiTokens;                         
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
 
-class Usuario extends Authenticatable                      
+class Usuario extends Authenticatable
 {
-    use HasApiTokens, Notifiable,HasFactory;                         
+    use HasApiTokens, Notifiable,HasFactory;
 
     protected $table = 'usuarios';
     public $timestamps = false;
@@ -43,6 +43,7 @@ class Usuario extends Authenticatable
     protected $casts = [
         'email_verificado' => 'boolean',
         'data_nascimento'  => 'date',
+        // 'senha'=>'hashed' //Descomente para não precisar ficar chamando bcrypt ou o ideal seria que seria o facade Hash::make
     ];
 
     /* Informa ao Laravel qual coluna é usada como senha.   */
